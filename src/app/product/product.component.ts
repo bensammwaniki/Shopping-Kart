@@ -1,3 +1,4 @@
+import { ApiService } from './../service/api.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -6,10 +7,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./product.component.css']
 })
 export class ProductComponent implements OnInit {
+public productList:any;
 
-  constructor() { }
+  constructor(private api:ApiService) { }
 
   ngOnInit(): void {
+    this.api.getProducts().subscribe(res=>{
+      return this.productList = res;
+    })
   }
 
 }

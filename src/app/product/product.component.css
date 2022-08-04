@@ -1,0 +1,10 @@
+.image{
+    height: 13rem;
+    width: 16rem;
+    object-fit: contain;
+}
+.desc{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
