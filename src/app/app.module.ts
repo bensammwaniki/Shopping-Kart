@@ -1,4 +1,5 @@
-import { NgModule } from '@angular/core';
+import { RouterModule } from '@angular/router';
+import { NgModule, Component } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -18,7 +19,21 @@ import {HttpClientModule } from '@angular/common/http';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    RouterModule.forRoot([
+      {
+        path:'product/:prodId',
+        component: ProductComponent
+      },
+      {
+        path:'',
+        component: ProductComponent
+      },
+      {
+        path:'cart',
+        component: CartComponent
+      },
+    ])
     ],
   providers: [],
   bootstrap: [AppComponent]
