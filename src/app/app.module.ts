@@ -8,13 +8,15 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { CartComponent } from './cart/cart.component';
 import { ProductComponent } from './product/product.component';
 import {HttpClientModule } from '@angular/common/http';
+import { RegisterComponent } from './register/register.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     CartComponent,
-    ProductComponent
+    ProductComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
